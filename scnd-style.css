@@ -1,0 +1,1099 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    font-family:cursive;
+  }
+
+
+/* Header Styling */
+header {
+    height: 100px;
+    padding: 0;
+    color: white;
+}
+
+.nav {
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    padding-left: 1vw;
+    padding-right: 8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000;
+    background-color: #202020;
+}
+
+.nav-logo {
+    background-image: url('img/navlogo.webp');
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.nav-optns {
+    display: flex;
+    margin-left: 5vw;
+    align-items: center;
+    gap: 5vw;
+}
+.nav a {
+    position: relative;
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+.nav a:hover {
+    color: #419ef5;
+    transform: translateY(-4px);
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+} 
+
+.nav a::after {
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background-color: #FFCF3D;
+    transition: all 0.4s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav i {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: none;
+}
+
+  /* RESPONSIVENESS */
+
+  @media (max-width: 768px) {
+
+    body {
+        font-family: arial;
+    }
+    .nav {
+      padding-left: 2vw;
+      padding-right: 2vw;
+      height: 80px;
+      width: 100%;
+    }
+
+    .nav a {
+        font-size: 0.1rem;
+    }
+      
+    .nav-logo {
+        width: 60px;
+        height: 60px;
+    }
+      
+    .nav-optns {
+        display: flex;
+        margin-left: 5vw;
+        align-items: center;
+        gap: 2vw;
+    }
+      
+    .nav a {
+        font-size: 1em;
+    }
+}
+  
+
+/* Hero Section Styling */
+
+
+.hero-section {
+    height: 46vw;
+    padding: 2vw 2vw;
+    margin-top: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/blackboard-img.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    margin-bottom: 1vw;
+    color: azure;
+}
+
+.hero-text h2 {
+    width: 70vw;
+    font-size: 5.5vw;
+    color:#70BBFF;
+    margin-bottom: 1.5vw;
+    margin-left: 8vw;
+    line-height: normal;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+    transition: all 0.5s;
+}
+
+.hero-text h2:hover {
+    transform: scale(1.1);
+}
+
+.hero-text span {
+    color: #FFCF3D;
+}
+
+.hero-text p {
+    width: 56vw;
+    font-size: 3rem;
+    font-weight: 400;
+    color:azure;
+    text-align: center;
+    line-height: 3vw;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+    padding: 0vw 4vw;
+}
+
+.cta-button {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:azure;
+    border: 5px solid #FFCF3D;
+    padding: 0.5vw 0.5vw;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 0.4s;
+    margin-right: 2vw;
+    margin-top: 2vw;
+}
+
+.cta-button:hover {
+    transform: translateY(5px);
+    background-color: #FFCF3D;
+    color: black;
+}
+
+.content-body {
+    width: 100%;
+    height: 330vh;
+    padding: 0px 0px;
+}
+
+.about-section {
+    width: 100%;
+    padding: 0vw 3vw;
+    background-image: url('https://thumbs.dreamstime.com/b/training-webinar-e-learning-skills-business-internet-technology-concept-training-webinar-e-learning-skills-business-internet-121386257.jpg');
+    background-size: cover;
+}
+
+.about-content {
+    height: 100vh;
+    width: 100%;
+    padding: 3vw 0;
+}
+
+.about-content .why-us {
+    height: 10vh;
+    padding: 0vw 10vw;
+    color: #FFCF3D;
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.about-content .boxes {
+    height: 55vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2.5vw;
+}
+
+.about-content .info-box {
+    height: 100%;
+    width: 25vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-box .inner-context{
+    text-align: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.info-box .heading {
+    color: #a6e9d2;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.8vw;
+}
+
+.info-box p {
+    color: aqua;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    line-height: 2vw;
+    font-size: 1.1rem;
+}
+
+.mission-section {
+    width: 100%;
+    padding: 2vw 2vw;
+    margin-top: 2vw;
+}
+
+.content-wrapper {
+    height: 65vh;
+    display: flex;
+    padding: 1.8vw  6.8vw;
+}
+
+.content-wrapper .textside {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 0vw 1vw;
+    text-align: center;
+    line-height: 2vw;
+}
+
+.textside h2 {
+    font-size: 4rem;
+    color: #FFCF3D;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.textside p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-top: 4vw;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.content-wrapper .imgside {
+    width: 55%;
+    background-image: url('https://insights.ise.org.uk/wp-content/uploads/2023/02/5-competences-graduates-need-to-thrive-in-the-modern-workplace.png');
+    background-size: cover;
+}
+
+.interaction {
+    width: 100%;
+    padding: 3.8vw 2vw;
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/54/325/66/work-in-progress-wallpaper-preview.jpg');
+    background-size: cover;
+}
+
+.interaction .container {
+    height: 30vh;
+    width: 100%;
+    padding: 3vw 0vw;
+    background-color: transparent;
+}
+
+.interaction .row {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.row .element {
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element i {
+    font-size: 6rem;
+    font-weight: 800;
+    color: #FFCF3D;
+    transition: transform 0.3s ease;
+}
+
+.element i:hover {
+    transform: scale(1.2);
+}
+
+.element .element-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.8vw;
+    color: aliceblue;
+}
+
+.element-text h1 {
+    font-weight: 500;
+    font-size: 2rem;
+    font-family: none;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.element-text span {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Team Section */
+
+.team-section {
+    width: 100%;
+    padding: 5vw 0vw;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230416/pngtree-business-cooperation-handshake-city-background-image_2412210.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.team-section .content-wrapper {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-section .our-team {
+    font-size: 3rem;
+    color: #FFCF3D;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+}
+.team-section .team-members {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2vw;
+}
+
+.team-section .team-member {
+    height: 100%;
+    width: 25vw;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.team-member .img-one {
+    width: 100%;
+    height: 45%;
+    background-image: url('https://i0.wp.com/www.opindia.com/wp-content/uploads/2022/03/ojha.jpg?fit=700%2C400&ssl=1');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.team-member .img-two {
+    width: 100%;
+    height: 45%;
+    background-image: url('https://assets.entrepreneur.com/content/3x2/2000/1657520498-Myproject372.jpg?format=pjeg&auto=webp&crop=4:3');
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.team-member .img-three {
+    width: 100%;
+    height: 45%;
+    background-image: url('https://i.pinimg.com/736x/0a/c5/7b/0ac57be17f8af48499af5420a3706bb3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.team-member h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    color:burlywood;
+    margin-bottom: 5px;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.team-member p {
+    padding: 2vw 2vw;
+    height: 30vh;
+    font-size: 16px;
+    color: #e5dfdf;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+ /* General footer styling */
+ .footer {
+    height: 45vh;
+    width: 800%;
+    background-color: #202020;
+    color: white;
+  }
+  
+.footer-container {
+  height: 35vh;
+  width: 100%;
+  display: flex;
+  gap: 2.8vw;
+  padding: 2vw 10vw;
+}
+
+.footer-container h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.footer-section-about {
+  width: 20vw;
+}
+
+.footer-section-about p {
+  margin-top: 1.2vw;
+  font-size: 0.9rem;
+  line-height: 1.2vw;
+}
+
+.footer-section-links li {
+  margin-top: 1.2vw;
+  list-style:none;
+}
+
+.footer-section-links a {
+  text-decoration-line: none;
+  color: #ffffff;
+}
+
+.footer-section-contact p {
+  margin-top: 1.2vw;
+}
+
+.footer-section-social i {
+  margin-top: 1.2vw;
+  font-size: 3rem;
+}
+
+.footer-section-social i:hover {
+  color: #419ef5
+}
+
+.footer-bottom {
+  height: 10vh;
+}
+
+.footer-bottom p {
+  margin-left: 28vw;
+  padding-top: 2vw;
+}
+
+
+
+
+
+/* COURSES */
+
+.course-section {
+    padding: 3vw 0vw;
+    height: 530vh;
+    background-color:rgba(0, 0, 0, 0.7);
+}
+
+.course-section .heading {
+    color: #FFCF3D;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 2vw;
+    text-shadow:2px 4px 4px rgba(0, 0, 10, 0.8);
+}
+
+.course-section .courses-10 {
+    width: 100%;
+    height: 195vh;
+    padding: 0vw 6vw;
+    display: flex;
+    flex-direction: column;
+    background-image: url('img/class10.webp');
+    background-position: center;
+    background-size: contain;
+}
+
+.course-section .courses-12 {
+    width: 100%;
+    height: 195vh;
+    padding: 0vw 6vw;
+    display: flex;
+    flex-direction: column;
+    background-image: url('img/class12-img.jpg');
+    background-size: contain;
+}
+
+.course-section .courses-compet {
+    width: 100%;
+    height: 122vh;
+    padding: 0vw 6vw;
+    display: flex;
+    flex-direction: column;
+    background-image: url('img/compititor-img.webp');
+    background-position: center;
+    background-size: contain;
+}
+
+
+.courses-10 .heading {
+    height: 15vh;
+    color: #5b3f2b;
+    font-size: 3.5rem;
+    margin-top: 5vw;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.courses-12 .heading {
+    height: 15vh;
+    color: #5b3f2b;
+    font-size: 3.5rem;
+    margin-top: 5vw;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+.courses-compet .heading {
+    height: 15vh;
+    color: #5b3f2b;
+    font-size: 3.5rem;
+    margin-top: 5vw;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+.container-one {
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boxes {
+    height: 65vh;
+    width: 23vw;
+    margin-top: 1vw;
+    background-color: transparent;
+    border-radius: 25px;
+    perspective: 1000px;
+}
+
+.flip-box {
+    background-color: transparent;
+    width: 100%;
+    height:100%;
+    border-radius: 25px;
+    perspective: 1000px;
+  }
+
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 25px;
+    
+  }
+
+  .flip-box:hover .flip-box-inner {
+     transform: rotateY(180deg);
+    /*transform: rotateX(180deg); */
+  }
+
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+  }
+
+  .flip-box-front {
+    color: black;
+  }
+
+  .card-content1 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content1.webp');
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content2 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content2.webp'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content3 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content3.webp');
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+  .card-content4 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content4.webp'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content5 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content5.webp'); 
+    background-size: cover; 
+    background-position: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content6 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content6.webp'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content7 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/atom.webp'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content8 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/tube.webp'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content9 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/formula.webp'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content10 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content10.webp'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content11 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content11.webp'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content12 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content12.webp'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content13 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content13.webp'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content14 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content14.webp'); 
+    background-size: cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+
+  .card-content15 {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/content15.webp'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    border-radius: 25px;
+  }
+  
+  .flip-box-front h1 {
+    background-color: rgba(255,207,61, 0.6);
+    font-family: cursive;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+
+.flip-box-back {
+    transform: rotateY(180deg);
+    background-color: #000000;
+}
+
+.flip-box-back .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flip-box-back .img {
+    height: 45%;
+    width: 23vw;
+    border-top-left-radius:25px;
+    border-top-right-radius:25px;
+}
+
+.flip-box-back .text {
+    height: 55%;
+    width: 23vw;
+    color: white;
+    background-color: #000000;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text ul {
+    list-style-position: inside;
+    line-height: 2vw;
+    padding: 0vw 2vw;
+}
+
+.text li {
+    font-family: cursive;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.boxes .cta-btn {
+    height: 15vh;
+    width: 100%;
+    margin-top: 1.2vw;
+    padding: 1.5vw 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-btn .button {
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 500;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color:#419ef5;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.cta-btn .button:hover {
+    transform: scale(1.05);
+    background-color: #FFCF3D;
+}
+
+
+.contact-section {
+    padding: 4vw 8vw;
+    background-image: url('img/contact-img.webp');
+    background-size: cover;
+    background-color: #0A090E;
+}
+
+.contact-container {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-heading {
+    height: 10vh;
+    width: 100%;
+    color: orange;
+    text-shadow: 
+    2px 2px 4px rgba(255, 255, 255, 0.1), 
+    0 0 10px rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5vw;
+}
+
+.contact-heading h1 {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.contact-elements {
+    height: 80%;
+    width: 100%;
+    font-family: arial;
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.contact-elements h1 {
+    width: 100%;
+    height: 10%;
+    color: aqua;
+    font-size: 2.4rem;
+    font-family: cursive;
+    font-weight: 400;
+    align-items: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.contact-txt  {
+    height: 90%;
+    width: 100%;
+    padding: 2vw 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contact-txt  .address {
+    color: #419ef5;
+    height: 25%;
+}
+
+.contact-txt  .address i {
+    font-size: 2rem;
+    margin-right: 2vw;
+}
+
+.contact-txt  .address p {
+    font-size: 1.5rem;
+}
+
+.contact-txt  .whatsapp {
+    color: #419ef5;
+    height: 25%;
+}
+
+.contact-txt  .whatsapp i {
+    font-size: 2.5rem;
+    margin-right: 2vw;
+}
+
+.contact-txt  .whatsapp p {
+    font-size: 1.5rem;
+}
+
+.contact-txt  .email {
+    height: 25%;
+}
+
+.contact-txt  .email i {
+    font-size: 2rem;
+    margin-right: 2vw;
+}
+
+.contact-txt  .email p {
+    font-size: 1.5rem;
+}
+
+.flip-card {
+    width: 60%;
+    height: 100%;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateX(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  }
+  
+  .flip-card-front {
+    background-color: #2ecc71;
+    color: white;
+  }
+
+  .flip-card-front h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    margin-bottom: 3vw;
+  }
+
+  
+.flip-card-back {
+    background-color: #3498db;
+    color: white;
+    transform: rotateX(180deg);
+}
